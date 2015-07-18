@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InterfaceExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ctp-qh-KZS">
+                                <rect key="frame" x="16" y="56" width="568" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                    <segment title="Fifth"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-On-nPd">
+                                <rect key="frame" x="518" y="20" width="66" height="30"/>
+                                <state key="normal" title="Top Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ste-R7-NBT">
+                                <rect key="frame" x="-16" y="106" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title:An interesting title" id="0oO-1k-oOs"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js3-9x-Nn7">
+                                <rect key="frame" x="16" y="20" width="56" height="30"/>
+                                <state key="normal" title="Top Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FM-Yn-Yg5">
+                                <rect key="frame" x="16" y="555" width="82" height="30"/>
+                                <state key="normal" title="Bottom Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBV-CR-WpW">
+                                <rect key="frame" x="489" y="555" width="95" height="30"/>
+                                <state key="normal" title="Bootom Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-P6-bbm">
+                                <rect key="frame" x="16" y="193" width="518" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="ggn-Mt-1eC"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QbJ-P6-bbm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0DL-vC-ej6"/>
+                            <constraint firstItem="CD4-On-nPd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3P4-ka-jEE"/>
+                            <constraint firstItem="Ctp-qh-KZS" firstAttribute="trailing" secondItem="Ste-R7-NBT" secondAttribute="trailing" id="B9t-3v-Adu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6FM-Yn-Yg5" secondAttribute="bottom" constant="15" id="BKq-fC-kmB"/>
+                            <constraint firstItem="QbJ-P6-bbm" firstAttribute="leading" secondItem="Ctp-qh-KZS" secondAttribute="leading" id="CFX-yh-gaS"/>
+                            <constraint firstItem="QbJ-P6-bbm" firstAttribute="leading" secondItem="6FM-Yn-Yg5" secondAttribute="leading" id="EPL-rT-78X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QbJ-P6-bbm" secondAttribute="trailing" constant="50" id="Hcf-yI-jah"/>
+                            <constraint firstItem="yBV-CR-WpW" firstAttribute="baseline" secondItem="6FM-Yn-Yg5" secondAttribute="baseline" id="MQ1-1p-9cU"/>
+                            <constraint firstItem="CD4-On-nPd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RAt-6T-qMP"/>
+                            <constraint firstItem="js3-9x-Nn7" firstAttribute="leading" secondItem="Ctp-qh-KZS" secondAttribute="leading" id="Uud-RM-mhM"/>
+                            <constraint firstItem="Ctp-qh-KZS" firstAttribute="top" secondItem="js3-9x-Nn7" secondAttribute="bottom" constant="6" id="Zjo-c3-lm3"/>
+                            <constraint firstItem="Ste-R7-NBT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-32" id="gs7-x2-UQt"/>
+                            <constraint firstItem="Ctp-qh-KZS" firstAttribute="trailing" secondItem="CD4-On-nPd" secondAttribute="trailing" id="ld9-bD-FF3"/>
+                            <constraint firstItem="QbJ-P6-bbm" firstAttribute="top" secondItem="Ste-R7-NBT" secondAttribute="bottom" constant="43" id="lz7-ZQ-Cwf"/>
+                            <constraint firstItem="Ste-R7-NBT" firstAttribute="trailing" secondItem="yBV-CR-WpW" secondAttribute="trailing" id="pQR-DE-mLZ"/>
+                            <constraint firstItem="Ste-R7-NBT" firstAttribute="top" secondItem="Ctp-qh-KZS" secondAttribute="bottom" constant="22" id="re6-Gp-Hhr"/>
+                            <constraint firstItem="CD4-On-nPd" firstAttribute="baseline" secondItem="js3-9x-Nn7" secondAttribute="baseline" id="y8Q-7q-GYB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-212"/>
+        </scene>
+    </scenes>
+</document>
