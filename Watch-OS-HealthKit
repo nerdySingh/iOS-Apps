@@ -1,0 +1,52 @@
+let healthKitStore:HKHealthStore = HKHealthStore()
+    func authorizeHealthKit(completion: @escaping ((success:Bool,error:NSError?)) -> Void!){
+        
+        
+        
+        let healthkitTypesToRead:Set<HKObjectType> = [
+        
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.bloodType)!,
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.biologicalSex)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!,
+        HKObjectType.workoutType()
+
+        
+    ]
+        
+        
+        let healthkitTypesToWrite:Set<HKSampleType> = [
+            
+            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMassIndex)!,
+            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!,
+            HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceWalkingRunning)!,
+            HKQuantityType.workoutType()
+        
+        ]
+    
+    
+    
+if !HKHealthStore.isHealthDataAvailable()
+        {
+        let error = NSError(domain: "com.raywenderlich.tutorials.healthkit", code: 2, userInfo: [NSLocalizedDescriptionKey:"HealthKit is not available in this Device"])
+            if( completion != nil )
+            {
+                print((completion))
+            }
+            return;
+        }
+        
+        
+        
+healthKitStore.requestAuthorization(toShare: healthkitTypesToWrite, read: healthkitTypesToRead) { (success, error) -> Void in
+            
+            if( completion != nil )
+            {
+                
+            }
+        }
+        
+    
+    }
+    
